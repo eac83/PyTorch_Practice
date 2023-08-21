@@ -49,6 +49,7 @@ model.load_state_dict(state)
 target_image = torchvision.io.read_image(str(image_path)).type(torch.float32)
 original_image = torch.clone(target_image)
 original_image = np.array(Image.open(image_path))
+
 # Divide the image pixel values by 255 to get them between [0, 1]
 target_image = target_image / 255.
 
