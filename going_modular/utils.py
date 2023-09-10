@@ -35,7 +35,7 @@ def save_model(model: torch.nn.Module,
 
     # Save the model state_dict()
     print(f'[INFO] Saving model to: {model_save_path}')
-    torch.save(obj=[model.kwargs, model.state_dict()],
+    torch.save(obj=model.state_dict(),
                f=model_save_path)
 
 def pred_and_plot_image(model: torch.nn.Module,
